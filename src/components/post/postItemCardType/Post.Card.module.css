@@ -1,0 +1,123 @@
+.card-container {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  height: auto;
+  font-family: 'Pretendard Variable';
+  background-color: var(--post-item-background-color);
+  border: 1px solid var(--post-item-border-color);
+  color: var(--post-item-text-color);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.card-top {
+  display: flex;
+  flex-direction: row;
+  height: 63px;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.profile-image-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 60px;
+  cursor: pointer;
+  background-image: url(./../../../assets/WR.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-left: 15px;
+}
+.user-nickname {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-tag-box {
+  display: flex;
+  align-items: center;
+  height: 61px;
+  padding-left: 15px;
+}
+
+.card-title {
+  display: flex;
+  padding-left: 15px;
+  height: 30px;
+  align-items: center;
+  font-size: 18px;
+}
+.card-content {
+  display: flex;
+  padding-left: 15px;
+  height: auto;
+  align-items: center;
+  font-size: 16px;
+}
+.card-image {
+  display: flex;
+  padding-left: 15px;
+  height: auto;
+  align-items: center;
+  font-size: 16px;
+}
+.card-bottom {
+  margin-left: 15px;
+  display: flex;
+  gap: 60px;
+}
+
+.card-like-box {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+.card-like-icon {
+  width: 32px;
+  height: 32px;
+  background-image: var(--post-item-Heart-icon);
+  cursor: pointer;
+}
+.card-like-icon:hover {
+  background-image: url('./../../../assets/HeartIcon_Hover.png');
+}
+.card-comment-box {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+.card-comment-icon {
+  width: 32px;
+  height: 32px;
+  background-image: var(--post-item-Comment-icon);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.card-comment-icon:hover {
+  background-image: url('./../../../assets/CommentIcon_Hover.png');
+}
+.card-save-box {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+.card-save-icon {
+  width: 32px;
+  height: 32px;
+  background-image: var(--post-item-Save-icon);
+  cursor: pointer;
+}
+.card-save-icon:hover {
+  background-image: url('./../../../assets/SaveIcon_Hover.png');
+}

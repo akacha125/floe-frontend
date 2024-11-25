@@ -1,0 +1,308 @@
+.navBar-container {
+  width: 100%; /* 부모 요소의 너비를 따름 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  height: 100%;
+  background-color: var(--nav-background-color);
+  padding-left: 180px;
+}
+.Home-Button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 140px;
+  height: 56px;
+  padding: 10px;
+  background-color: var(--nav-bar-button-background-color);
+  color: var(--nav-bar-button-text-color);
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  gap: 15px;
+  border-radius: 22px;
+  font-family: 'Pretendard Variable';
+}
+
+.Home-Button:hover {
+  background-color: var(--nav-bar-button-hover-background-color);
+  color: var(--nav-bar-button-hover-text-color);
+  .Home-Icon {
+    background-image: var(--nav-bar-Home-icon-Hover);
+  }
+}
+.Alarm-Button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 140px;
+  height: 56px;
+  padding: 10px;
+  background-color: var(--nav-bar-button-background-color);
+  color: var(--nav-bar-button-text-color);
+  border: none;
+  font-family: 'Pretendard Variable';
+  font-size: 20px;
+  border-radius: 22px;
+  cursor: pointer;
+  gap: 15px;
+}
+.Alarm-Button:hover {
+  background-color: var(--nav-bar-button-hover-background-color);
+  color: var(--nav-bar-button-hover-text-color);
+  .Heart-Icon {
+    background-image: var(--nav-bar-Alarm-icon-Hover);
+  }
+}
+.Post-Button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 140px;
+  height: 56px;
+  padding: 10px;
+  background-color: var(--nav-bar-button-background-color);
+  color: var(--nav-bar-button-text-color);
+  border: none;
+  font-family: 'Pretendard Variable';
+  font-size: 20px;
+  gap: 15px;
+  cursor: pointer;
+  border-radius: 22px;
+}
+.Post-Button:hover {
+  background-color: var(--nav-bar-button-hover-background-color);
+  color: var(--nav-bar-button-hover-text-color);
+  .Add-Icon {
+    background-image: var(--nav-bar-Add-icon-Hover);
+  }
+}
+.Save-Button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 22px;
+  width: 140px;
+  height: 56px;
+  padding: 10px;
+  background-color: var(--nav-bar-button-background-color);
+  color: var(--nav-bar-button-text-color);
+  border: none;
+  font-family: 'Pretendard Variable';
+  font-size: 20px;
+  cursor: pointer;
+  gap: 15px;
+}
+.Save-Button:hover {
+  background-color: var(--nav-bar-button-hover-background-color);
+  color: var(--nav-bar-button-hover-text-color);
+  .Save-Icon {
+    background-image: var(--nav-bar-Save-icon-Hover);
+  }
+}
+.Issue-Button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 22px;
+  width: 140px;
+  height: 56px;
+  padding: 10px;
+  background-color: var(--nav-bar-button-background-color);
+  color: var(--nav-bar-button-text-color);
+  border: none;
+  font-family: 'Pretendard Variable';
+  font-size: 20px;
+  cursor: pointer;
+  gap: 15px;
+}
+.Issue-Button:hover {
+  background-color: var(--nav-bar-button-hover-background-color);
+  color: var(--nav-bar-button-hover-text-color);
+  .Issue-Icon {
+    background-image: var(--nav-bar-Issue-icon-Hover);
+  }
+}
+
+.spacer {
+  height: 280px; /* 원하는 여백 높이 설정 */
+  width: 100%;
+  pointer-events: none; /* 클릭 차단 */
+}
+.See-More-Button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  width: 140px;
+  height: 56px;
+  padding: 10px;
+  border-radius: 22px;
+  background-color: var(--nav-bar-button-background-color);
+  color: var(--nav-bar-button-text-color);
+  border: none;
+  font-family: 'Pretendard Variable';
+  font-size: 20px;
+  cursor: pointer;
+}
+.See-More-Button:hover {
+  background-color: var(--nav-bar-button-hover-background-color);
+  color: var(--nav-bar-button-hover-text-color);
+  .More-Icon {
+    background-image: var(--nav-bar-More-icon-Hover);
+  }
+}
+
+.popup-container {
+  position: absolute;
+  bottom: 200px;
+  left: 180;
+  width: 150px;
+  background-color: var(--nav-bar-popup-box-background-color);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.option-button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.option-button:hover {
+  background-color: var(--nav-bar-popup-box-hover-background-color);
+}
+.mode-button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.mode-button:hover {
+  background-color: var(--nav-bar-popup-box-hover-background-color);
+}
+.Profile-Button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 140px;
+  height: 56px;
+  padding: 10px;
+  background-color: var(--nav-bar-button-background-color);
+  color: var(--nav-bar-button-text-color);
+  gap: 15px;
+  border-radius: 22px;
+  border: none;
+  font-family: 'Pretendard Variable';
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Profile-Button:hover {
+  background-color: var(--nav-bar-button-hover-background-color);
+  color: var(--nav-bar-button-hover-text-color);
+  .Guest-Icon {
+    background-image: var(--nav-bar-Guest-icon-Hover);
+  }
+}
+
+.Home-Icon {
+  background-image: var(--nav-bar-Home-icon);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.Heart-Icon {
+  background-image: var(--nav-bar-Alarm-icon);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.Add-Icon {
+  background-image: var(--nav-bar-Add-icon);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.Save-Icon {
+  background-image: var(--nav-bar-Save-icon);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.Issue-Icon {
+  background-image: var(--nav-bar-Issue-icon);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.More-Icon {
+  background-image: var(--nav-bar-More-icon);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.Guest-Icon {
+  background-image: var(--nav-bar-Guest-icon);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.Moon-Icon {
+  background-image: url('./../../assets/MoonIcon_Dark.png');
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.Sun-Icon {
+  background-image: url('./../../assets/SunIcon_Dark.png');
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+.Option-Icon {
+  background-image: url('./../../assets/OptionIcon_Dark.png');
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+}
+
+.active {
+  background-color: var(--nav-active-button-background-color);
+  color: var(--nav-active-button-text-color);
+}
+.active-icon {
+  background-image: var(--nav-bar-active-Home-icon);
+}
+.Heart-Icon.active-icon {
+  background-image: var(--nav-bar-active-Alarm-icon);
+}
+.Add-Icon.active-icon {
+  background-image: var(--nav-bar-active-Add-icon);
+}
+.Save-Icon.active-icon {
+  background-image: var(--nav-bar-active-Save-icon);
+}
+.Issue-Icon.active-icon {
+  background-image: var(--nav-bar-active-Issue-icon);
+}

@@ -1,0 +1,189 @@
+#auth-wrapper {
+  display: flex;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100vh;
+}
+.auth-left-box {
+  flex: 1;
+  background-image: var(--auth-left-box-bg-image);
+  background-position: center;
+  background-size: cover;
+}
+.auth-right-box {
+  flex: 1;
+  flex-direction: column;
+}
+.auth-right-top-title {
+  font-family: 'Road Rage';
+
+  font-size: 100px;
+  display: inline; /* 텍스트 영역만 클릭 가능하도록 설정 */
+  /* 그라데이션 */
+  background-image: linear-gradient(180deg, #2bc0e4 0%, #eaecc6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* 웹킷 브라우저용 */
+  width: 122px;
+  margin-bottom: 34px;
+  line-height: 150%;
+  letter-spacing: -0.4px;
+}
+.auth-right-intro-title {
+  font-family: 'Pretendard Variable';
+
+  font-size: 40px;
+  color: var(--auth-right-intro-title-color);
+  line-height: 150%;
+  letter-spacing: -0.4px;
+  margin-bottom: 111px; /* 간격을 141px로 설정 */
+}
+.google-login-button {
+  font-family: 'Roboto Medium';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* 아이콘과 텍스트 간격 */
+
+  font-size: 20px;
+
+  width: 300px;
+  height: 60px;
+  color: #757575;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  text-decoration: none;
+  margin-bottom: 35px;
+}
+.google-icon {
+  width: 48px;
+  height: 48px;
+}
+.google-login-button:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--google-text-hover-color);
+}
+.github-login-button {
+  font-family: 'Roboto Medium';
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* 아이콘과 텍스트 간격 */
+
+  font-size: 20px;
+
+  width: 300px;
+  height: 60px;
+  color: #ffffff;
+  background-color: #000000;
+  border: var(--github-login-button-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  text-decoration: none;
+  margin-bottom: 59px;
+}
+.github-icon {
+  background-image: url('./../../assets/github.png');
+  background-position: center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+.github-login-button:hover {
+  background-color: #333333; /* 호버 시 더 진한 회색 */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.divider {
+  font-family: 'Pretendard Variable';
+
+  font-size: 18px;
+
+  margin-bottom: 26px;
+  color: var(--divider-text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px; /* OR 텍스트와 선 사이 간격 */
+}
+.line {
+  width: 128px;
+  height: 1px;
+  background-color: var(--divider-line-color); /* 선 색상 */
+}
+.Button-Sign-Up {
+  font-family: 'Pretendard Variable';
+
+  font-size: 20px;
+
+  width: 300px;
+  height: 50px;
+  margin-bottom: 44px;
+
+  border: var(--signup-button-border-color);
+  border-radius: 10px;
+  background-color: var(--signup-button-backgroud-color);
+  color: var(--signup-button-text-color);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  text-decoration: none;
+}
+.Button-Sign-Up:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--hover-text-color);
+  background-color: var(--hover-background-color);
+}
+.Already-text {
+  font-family: 'Pretendard Variable';
+
+  margin-bottom: 43px;
+  color: var(--text-color);
+  font-size: 20px;
+}
+.Button-Sign-In {
+  font-family: 'Pretendard Variable';
+
+  font-size: 20px;
+
+  width: 300px;
+  height: 50px;
+  border: var(--signup-button-border-color);
+  border-radius: 10px;
+  background-color: var(--signup-button-backgroud-color);
+  color: var(--signup-button-text-color);
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  text-decoration: none;
+}
+.Button-Sign-In:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--hover-text-color);
+  background-color: var(--hover-background-color);
+}
+.theme-button {
+  cursor: pointer;
+}
+.Button-Return-Home {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 200px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Pretendard Variable';
+  font-size: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.Button-Return-Home:hover {
+  background-color: #555;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,61 @@
+.sidebar-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-height: calc(100vh - 137px); /* 헤더 높이를 제외한 최대 높이 */
+  position: relative;
+  margin-left: auto; /* 페이지 우측으로 정렬 */
+  background-color: var(--side-bar-background-color);
+}
+
+.Intro-Box,
+.Watching-Tag-Box,
+.Ignoring-Tag-Box {
+  width: 280px;
+  height: 130px;
+  background-color: var(--side-bar-box-background-color); /* 박스 색상 */
+  border-radius: 8px;
+}
+.Chart-Box {
+  width: 280px;
+  height: 300px;
+  background-color: var(--side-bar-box-background-color); /* 박스 색상 */
+  border-radius: 8px;
+}
+
+.Intro-Box {
+  margin-bottom: 40px; /* Intro-Box와 Watching-Tag-Box 사이의 간격 */
+  background-color: var(--side-bar-intro-box-background-color);
+}
+
+.Intro-Title {
+  font-size: 16px;
+  font-family: 'Pretendard Variable';
+  background-color: #4cbfe5;
+  border-radius: 8px 8px 0px 0px;
+  height: 30px;
+  display: flex; /* 수직 중앙 정렬을 위한 flex 설정 */
+  align-items: center; /* 수직 중앙 정렬 */
+  padding-left: 10px; /* 텍스트의 좌측 여백 */
+}
+.Intro-other {
+  font-size: 14px;
+  font-family: 'Pretendard Variable';
+  color: #000000;
+  background-color: var(--side-bar-intro-box-background-color); /* 박스 색상 */
+}
+.Watching-Tag-Title,
+.Ignoring-Tag-Title,
+.Chart-Box-Title {
+  font-size: 16px;
+  font-family: 'Pretendard Variable';
+  background-color: var(--side-bar-title-background-color);
+  border-radius: 8px 8px 0px 0px;
+  height: 30px;
+  color: var(--side-bar-title-text-color);
+  display: flex; /* 수직 중앙 정렬을 위한 flex 설정 */
+  align-items: center; /* 수직 중앙 정렬 */
+  padding-left: 10px; /* 텍스트의 좌측 여백 */
+}

@@ -1,0 +1,131 @@
+.list-container {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  height: auto;
+  font-family: 'Pretendard Variable';
+  background-color: var(--post-item-background-color);
+  color: var(--post-item-text-color);
+  border: 1px solid var(--post-item-border-color);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.list-top {
+  display: flex;
+  flex-direction: row;
+  height: 63px;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid black;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.profile-image-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 60px;
+  cursor: pointer;
+  background-image: url(./../../../assets/WR.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-left: 15px;
+}
+.user-nickname {
+  font-size: 20px;
+  cursor: pointer;
+}
+.stack-tag-box {
+  display: flex;
+  align-items: center;
+  height: 53px;
+  padding-left: 15px;
+}
+
+.list-main {
+  display: flex; /* 변경: flex로 가로 배치 */
+  flex-direction: row; /* 변경: 가로 방향 */
+  align-items: center;
+  gap: 20px; /* 콘텐츠와 이미지 간격 */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column; /* 제목과 내용을 세로로 배치 */
+  width: 100%;
+}
+.list-title {
+  display: flex;
+  padding-left: 15px;
+  height: 30px;
+  align-items: center;
+  font-size: 18px;
+}
+.list-content {
+  display: flex;
+  padding-left: 15px;
+  height: 180px;
+  font-size: 16px;
+}
+.list-image {
+  display: flex;
+  height: 200px;
+  width: 300px; /* 고정된 너비 및 높이 설정 */
+  border-radius: 8px;
+  margin-right: 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.list-bottom {
+  margin-left: 15px;
+  display: flex;
+  gap: 60px;
+}
+
+.list-like-box {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+.list-like-icon {
+  width: 32px;
+  height: 32px;
+  background-image: var(--post-item-Heart-icon);
+  cursor: pointer;
+}
+.list-like-icon:hover {
+  background-image: var(--post-item-Heart-icon-hover);
+}
+.list-comment-box {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+.list-comment-icon {
+  width: 32px;
+  height: 32px;
+  background-image: var(--post-item-Comment-icon);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.list-comment-icon:hover {
+  background-image: var(--post-item-Comment-icon-hover);
+}
+.list-save-box {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+.list-save-icon {
+  width: 32px;
+  height: 32px;
+  background-image: var(--post-item-Save-icon);
+  cursor: pointer;
+}
+.list-save-icon:hover {
+  background-image: var(--post-item-Save-icon-hover);
+}
