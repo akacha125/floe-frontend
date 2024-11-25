@@ -1,0 +1,18 @@
+.mypage-Container {
+  display: grid;
+  grid-template-columns: 400px 1fr 320px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1920px; /* 전체 너비 제한 */
+  margin: 0 auto;
+  padding-top: 157px;
+  height: auto;
+  background-color: var(--main-background-color);
+}
+.navbar {
+  position: sticky;
+  top: 157px;
+  width: 170px; /* Navbar 너비 고정 */
+  align-self: start; /* 스크롤 시 시작 위치에 고정 */
+  height: calc(100vh - 157px);
+}

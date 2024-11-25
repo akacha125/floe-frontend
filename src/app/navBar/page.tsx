@@ -73,15 +73,15 @@ export default function NavBar() {
           Post
         </button>
       </Link>
-      {/* /mypage/save -> /save 임시 변경 */}
-      <Link href="/save" passHref style={{ textDecoration: 'none' }}>
+      {/* /mypage/save -> /mypage 로 임시변경 */}
+      <Link href="/mypage" passHref style={{ textDecoration: 'none' }}>
         <button
           className={`${styles['Save-Button']} ${
-            isActive('/save') ? styles['active'] : ''
+            isActive('/mypage') ? styles['active'] : ''
           }`}>
           <div
             className={`${styles['Save-Icon']} ${
-              isActive('/save') ? styles['active-icon'] : ''
+              isActive('/mypage') ? styles['active-icon'] : ''
             }`}></div>
           Save
         </button>
