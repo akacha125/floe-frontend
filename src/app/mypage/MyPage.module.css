@@ -16,3 +16,15 @@
   align-self: start; /* 스크롤 시 시작 위치에 고정 */
   height: calc(100vh - 157px);
 }
+.user-Image {
+  width: 7rem;
+  height: 7rem;
+  background-image: var(--mypage-image-userInitialImage);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  border: 0.5px solid gray;
+  border-radius: 50%;
+}

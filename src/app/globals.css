@@ -122,6 +122,8 @@
   --post-Page-Upload-Button-background-color: #ffffff;
   --post-Page-Upload-Button-background-color-hover: #eaeaea;
   --post-Page-Upload-Button-text-color: #000000;
+
+  --mypage-image-userInitialImage: url('./../assets/JJangGuWinter.png');
 }
 body {
   background-color: #f9fafa;
