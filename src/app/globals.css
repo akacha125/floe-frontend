@@ -43,13 +43,22 @@
   --main-background-color: #f9fafa;
 
   --search-bar-border-color: rgba(0, 0, 0, 0.5);
-
+  /* navbar */
   --nav-background-color: #f9fafa;
   --nav-bar-button-text-color: #000000;
   --nav-bar-button-background-color: #f9fafa;
   --nav-bar-button-hover-background-color: rgba(0, 0, 0, 0.3);
   --nav-bar-button-hover-text-color: #ffffff;
 
+  /* alarm */
+  --nav-bar-alarm-popup-box-background-color: #ffffff;
+  --nav-bar-alarm-popup-box-border-color: #dfdfdf71;
+  --nav-bar-alarm-popup-box-text-color: #000000;
+  --nav-bar-alarm-popup-box-user-follow-request-text-color: #000000;
+  --nav-bar-alarm-popup-box-user-nickname-text-color: rgba(0, 0, 0, 0.6);
+  --nav-bar-alarm-popup-box-item-background-color: #ffffff;
+  --nav-bar-alarm-popup-box-item-hover-background-color: #dfdfdf71;
+  /* navbar-icon */
   --nav-bar-Home-icon: url('./../assets/HomeIcon_Dark.png');
   --nav-bar-Alarm-icon: url('./../assets/HeartIcon_Dark.png');
   --nav-bar-Add-icon: url('./../assets/AddIcon_Dark.png');
@@ -74,17 +83,17 @@
   --nav-bar-active-Add-icon: url('./../assets/AddIcon_White.png');
   --nav-bar-active-Save-icon: url('./../assets/SaveIcon_White.png');
   --nav-bar-active-Issue-icon: url('./../assets/IssueIcon_White.png');
-
+  /* navbar-see-more */
   --nav-bar-popup-box-background-color: #ffffff;
   --nav-bar-popup-box-text-color: #000000;
   --nav-bar-popup-box-hover-background-color: #f0f0f0;
-
+  /* side-bar */
   --side-bar-background-color: ##f9fafa;
   --side-bar-title-background-color: #000000;
   --side-bar-title-text-color: #ffffff;
   --side-bar-intro-box-background-color: #eaeaea;
   --side-bar-box-background-color: #eaeaea;
-
+  /* post page */
   --post-item-background-color: #ffffff;
   --post-item-text-color: #000000;
   --post-item-border-color: #000000;
@@ -100,7 +109,7 @@
   --post-item-Heart-icon-active: url('./../assets/HeartIcon_Active.png');
   --post-item-Comment-icon-active: url('./../assets/CommentIcon_Dark.png');
   --post-item-Save-icon-active: url('./../assets/SaveIcon_Dark.png');
-
+  /* main page toggle button */
   --toggle-Card-icon: url('./../assets/Card_Dark.png');
   --toggle-Card-icon-hover: url('./../assets/Card_Hover.png');
   --toggle-List-icon: url('./../assets/List_Dark.png');
@@ -149,13 +158,21 @@ body {
   --search-bar-border-color: rgba(255, 255, 255, 0.5);
 
   --main-background-color: #000000;
-
+  /* navbar */
   --nav-background-color: #000000;
   --nav-bar-button-text-color: #ffffff;
   --nav-bar-button-background-color: #000000;
   --nav-bar-button-hover-background-color: rgba(211, 211, 211, 0.6);
   --nav-bar-button-hover-text-color: #000000;
-
+  /* alarm */
+  --nav-bar-alarm-popup-box-background-color: #222222;
+  --nav-bar-alarm-popup-box-text-color: #ffffff;
+  --nav-bar-alarm-popup-box-border-color: #dfdfdf71;
+  --nav-bar-alarm-popup-box-user-follow-request-text-color: #ffffff;
+  --nav-bar-alarm-popup-box-user-nickname-text-color: rgba(211, 211, 211, 0.6);
+  --nav-bar-alarm-popup-box-item-background-color: #222222;
+  --nav-bar-alarm-popup-box-item-hover-background-color: #dfdfdf71;
+  /* navbar-icon */
   --nav-bar-Home-icon: url('./../assets/HomeIcon_White.png');
   --nav-bar-Alarm-icon: url('./../assets/HeartIcon_White.png');
   --nav-bar-Add-icon: url('./../assets/AddIcon_White.png');
@@ -180,17 +197,17 @@ body {
   --nav-bar-active-Add-icon: url('./../assets/AddIcon_Dark.png');
   --nav-bar-active-Save-icon: url('./../assets/SaveIcon_Dark.png');
   --nav-bar-active-Issue-icon: url('./../assets/IssueIcon_Dark.png');
-
+  /* navbar-see-more */
   --nav-bar-popup-box-background-color: rgba(211, 211, 211, 0.8);
   --nav-bar-popup-box-text-color: #000000;
   --nav-bar-popup-box-hover-background-color: #f0f0f0;
-
+  /* side-bar */
   --side-bar-background-color: #000000;
   --side-bar-title-background-color: #ffffff;
   --side-bar-title-text-color: #000000;
   --side-bar-intro-box-background-color: #eaeaea;
   --side-bar-box-background-color: rgba(211, 211, 211, 0.8);
-
+  /* post page */
   --post-item-background-color: #000000;
   --post-item-text-color: #ffffff;
   --post-item-border-color: rgba(211, 211, 211, 0.8);
@@ -206,6 +223,7 @@ body {
   --post-item-Heart-icon-active: url('./../assets/HeartIcon_Dark.png');
   --post-item-Comment-icon-active: url('./../assets/CommentIcon_Dark.png');
   --post-item-Save-icon-active: url('./../assets/SaveIcon_Dark.png');
+  /* main page toggle button */
   --toggle-Card-icon: url('./../assets/Card_White.png');
   --toggle-Card-icon-hover: url('./../assets/Card_Hover.png');
   --toggle-List-icon: url('./../assets/List_White.png');
