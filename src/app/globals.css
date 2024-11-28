@@ -109,6 +109,17 @@
   --post-item-Heart-icon-active: url('./../assets/HeartIcon_Active.png');
   --post-item-Comment-icon-active: url('./../assets/CommentIcon_Dark.png');
   --post-item-Save-icon-active: url('./../assets/SaveIcon_Dark.png');
+
+  /* post detail page */
+  --post-detail-item-top-border-color: #2222;
+  --post-detail-item-title-text-color: #4cbfe5;
+  --post-detail-upload-time-text-color: rgba(0, 0, 0, 0.6);
+
+  --post-detail-comment-apply-button-background-color: #ffffff;
+  --post-detail-comment-apply-button-background-color-hover: rgba(0, 0, 0, 0.6);
+  --post-detail-comment-apply-button-text-color: rgba(0, 0, 0, 0.6);
+  --post-detail-comment-apply-button-text-color-hover: #eaeaea;
+
   /* main page toggle button */
   --toggle-Card-icon: url('./../assets/Card_Dark.png');
   --toggle-Card-icon-hover: url('./../assets/Card_Hover.png');
@@ -223,6 +234,21 @@ body {
   --post-item-Heart-icon-active: url('./../assets/HeartIcon_Dark.png');
   --post-item-Comment-icon-active: url('./../assets/CommentIcon_Dark.png');
   --post-item-Save-icon-active: url('./../assets/SaveIcon_Dark.png');
+
+  /* post detail page */
+  --post-detail-item-top-border-color: #222222;
+  --post-detail-item-title-text-color: #4cbfe5;
+  --post-detail-upload-time-text-color: rgba(211, 211, 211, 0.8);
+  --post-detail-comment-apply-button-background-color: rgba(
+    255,
+    255,
+    255,
+    0.35
+  );
+  --post-detail-comment-apply-button-background-color-hover: #ffffff;
+  --post-detail-comment-apply-button-text-color: rgba(0, 0, 0, 0.65);
+  --post-detail-comment-apply-button-text-color-hover: #000000;
+
   /* main page toggle button */
   --toggle-Card-icon: url('./../assets/Card_White.png');
   --toggle-Card-icon-hover: url('./../assets/Card_Hover.png');

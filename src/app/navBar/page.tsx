@@ -126,7 +126,7 @@ export default function NavBar() {
         </div>
       )}
 
-      <Link href="/post" passHref style={{ textDecoration: 'none' }}>
+      <Link href="/post/write" passHref style={{ textDecoration: 'none' }}>
         <button
           className={`${styles['Post-Button']} ${
             isActive('/post') ? styles['active'] : ''
