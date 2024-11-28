@@ -29,6 +29,7 @@
   background-size: cover;
   background-position: 50% 50%;
   margin-left: 15px;
+  cursor: pointer;
 }
 .user-nickname {
   font-size: 20px;
@@ -38,6 +39,7 @@
 .card-main {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .stack-tag-box {

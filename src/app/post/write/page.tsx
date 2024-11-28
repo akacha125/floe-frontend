@@ -8,11 +8,11 @@ import Bold from '@tiptap/extension-bold';
 import Italic from '@tiptap/extension-italic';
 import Code from '@tiptap/extension-code';
 import Placeholder from '@tiptap/extension-placeholder';
-import Header from '../header/page';
-import styles from './Post.module.css';
-import NavBar from '../navBar/page';
+import Header from '../../header/page';
+import styles from './PostWrite.module.css';
+import NavBar from '../../navBar/page';
 
-export default function Post() {
+export default function PostWrite() {
   const [tag, setTag] = useState<string>('');
   const [category, setCategory] = useState<string>('');
   const [content, setContent] = useState<string>('');
@@ -43,7 +43,7 @@ export default function Post() {
   return (
     <>
       <Header />
-      <div className={styles['post-Container']}>
+      <div className={styles['post-write-page-Container']}>
         <aside className={styles['navbar']}>
           <NavBar />
         </aside>
