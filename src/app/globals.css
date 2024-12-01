@@ -120,6 +120,11 @@
   --post-detail-comment-apply-button-text-color: rgba(0, 0, 0, 0.6);
   --post-detail-comment-apply-button-text-color-hover: #eaeaea;
 
+  /* comment item */
+  --comment-item-background-color: #ffffff;
+  --comment-item-text-color: #000000;
+  --comment-item-text-color-hover: rgba(0, 0, 0, 0.6);
+
   /* main page toggle button */
   --toggle-Card-icon: url('./../assets/Card_Dark.png');
   --toggle-Card-icon-hover: url('./../assets/Card_Hover.png');
@@ -248,6 +253,10 @@ body {
   --post-detail-comment-apply-button-background-color-hover: #ffffff;
   --post-detail-comment-apply-button-text-color: rgba(0, 0, 0, 0.65);
   --post-detail-comment-apply-button-text-color-hover: #000000;
+
+  /* comment item */
+  --comment-item-text-color: #ffffff;
+  --comment-item-text-color-hover: rgba(255, 255, 255, 0.5);
 
   /* main page toggle button */
   --toggle-Card-icon: url('./../assets/Card_White.png');

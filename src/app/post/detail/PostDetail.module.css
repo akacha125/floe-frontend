@@ -77,7 +77,7 @@
 }
 .post-detail-content {
   display: flex;
-  padding-left: 15px;
+  padding: 0px 15px;
   height: auto;
   align-items: center;
   font-size: 18px;
@@ -86,9 +86,10 @@
 }
 .post-detail-image-container {
   display: flex;
-  padding-left: 15px;
+  padding: 0px 15px;
+  justify-content: center;
   align-items: center;
-  width: 100%;
+  max-width: 1200px;
   height: 400px;
 }
 .post-detail-images {
@@ -96,7 +97,7 @@
   height: 100%;
   background-image: url('./../../../assets/test.png');
   background-size: cover;
-  background-position: 50%;
+  background-position: 50% 50%;
 }
 .post-detail-bottom {
   margin-left: 15px;
@@ -169,37 +170,16 @@
   font-weight: bold;
   margin-bottom: 10px;
 }
-
-.comment-list {
-  overflow-y: auto;
-  gap: 200px;
-}
-
-.comment-item {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-.comment-user {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.comment-text {
-  font-size: 14px;
-  color: var(--post-item-text-color);
-}
-
 .comment-input-container {
   display: flex;
   align-items: center;
   gap: 10px;
   width: 100%;
+  margin-bottom: 10px;
 }
 .user-profile-box {
   display: flex;
-  gap: 4px;
+  gap: 10px;
   align-items: center;
 }
 .user-profile-image {
@@ -210,16 +190,17 @@
   border-radius: 50%;
 }
 .user-profile-nickname {
-  font-size: 15px;
+  font-size: 16px;
 }
 .comment-input {
   flex: 1;
-  padding: 10px;
+  padding: 10px 0px;
   border: none;
   border-bottom: 1px solid var(--post-item-border-color);
   background-color: var(--post-item-background-color); /* 배경색 추가 */
   outline: none; /* 포커스 시 기본 outline 제거 */
   color: var(--post-item-text-color);
+  font-size: 15px;
 }
 .comment-Apply-Button {
   width: 61px;

@@ -1,0 +1,53 @@
+.comment-item-list-container {
+  display: flex;
+}
+.comment-item-list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.comment-item {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.comment-item-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.comment-user-profile-image {
+  width: 32px;
+  height: 32px;
+  background-image: url(./../../assets/WR.png);
+  background-size: cover;
+  border-radius: 50%;
+}
+.comment-user-nickname {
+  font-size: 16px;
+}
+
+.comment-text {
+  font-size: 16px;
+  color: var(--comment-item-text-color);
+}
+
+.comment-item-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.comment-write-time {
+  font-size: 14px;
+  margin-left: 110px;
+}
+.comment-reply-button {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.comment-reply-button:hover {
+  color: var(--comment-item-text-color-hover);
+  transition: color 0.2s ease;
+}
