@@ -1,10 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from './PostDetail.module.css';
-import Image from 'next/image';
 import Header from './../../header/page';
 import NavBar from './../../navBar/page';
-import SideBar from './../../sideBar/page';
+import Comment from '@/components/comment/page';
 
 export default function PostDetail() {
   //          state: 좋아요 아이콘 버튼 클릭 상태          //
@@ -106,18 +105,7 @@ export default function PostDetail() {
                 />
                 <div className={styles['comment-Apply-Button']}>Apply</div>
               </div>
-              <div className={styles['comment-list']}>
-                <div className={styles['comment-item']}>
-                  <div className={styles['comment-user']}>Kgccm</div>
-                  <div className={styles['comment-text']}>댓글 추가...</div>
-                </div>
-                <div className={styles['comment-item']}>
-                  <div className={styles['comment-user']}>JaeJae</div>
-                  <div className={styles['comment-text']}>
-                    댓글이 어쩌구 저쩌구 해서...
-                  </div>
-                </div>
-              </div>
+              <Comment />
             </div>
           )}
         </div>
