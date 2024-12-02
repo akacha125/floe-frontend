@@ -16,6 +16,20 @@
   align-self: start; /* 스크롤 시 시작 위치에 고정 */
   height: calc(100vh - 157px);
 }
+
+.user-Contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-Info {
+  width: 46rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .user-Image {
   width: 7rem;
   height: 7rem;
@@ -27,4 +41,88 @@
   box-sizing: border-box;
   border: 0.5px solid gray;
   border-radius: 50%;
+
+  margin-right: 1rem;
+}
+
+.user-Data-Wrapper {
+  width: 20rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard Variable';
+  text-align: end;
+  align-items: end;
+}
+
+.user-Data {
+  width: 10rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard Variable';
+  text-align: end;
+
+  margin-left: 1rem;
+}
+
+.user-Posts {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: end;
+  justify-content: space-between;
+}
+.user-Followers {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: end;
+  justify-content: space-between;
+}
+.user-Following {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: end;
+  justify-content: space-between;
+}
+.data-Number {
+  width: 3rem;
+}
+
+
+.user-Edit {
+  width: 14rem;
+  display: flex;
+  flex-direction: row;
+  justify-content : space-between;
+}
+.edit-Button {
+  width: 5rem;
+}
+.user-Name {
+
+}
+
+.user-setting {
+  width: 1.125rem;
+  height: 1.25rem;
+  background-image: var(--mypage-image-settingBlack);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  background-color: transparent; /* 배경 투명 설정 */
+  padding: 0rem;
+}
+
+.tab-Content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-contnet: space-between;
 }
