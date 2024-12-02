@@ -13,7 +13,7 @@ interface TabNavigationProps {
 export default function TabNavigation({
   activeTab,
   onTabClick,
-}: TabNavigationProps) {666666
+}: TabNavigationProps) {
   const tabs: Array<string> = ['POSTS', 'LIKE', 'SAVE'];
 
   return (
