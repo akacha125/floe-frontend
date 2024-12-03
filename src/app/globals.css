@@ -42,6 +42,18 @@
   --google-text-hover-color: #000000;
   --main-background-color: #f9fafa;
 
+  /* signIn-Page */
+  --sign-in-container-color: #ffffff;
+  --return-icon: url('./../assets/ReturnIcon_Dark.png');
+  --return-icon-hover: url('./../assets/ReturnIcon_Hover.png');
+  --sign-in-button-background-color: #ffffff;
+  --sign-in-button-background-color-hover: #000000;
+  --sign-in-button-text-color: #000000;
+  --sign-in-button-text-color-hover: #ffffff;
+  --sign-in-button-border-color: lightgrey;
+  --other-text-color: rgba(0, 0, 0, 0.7);
+  --other-text-color-hover: #000000;
+  /* search-bar */
   --search-bar-border-color: rgba(0, 0, 0, 0.5);
   /* navbar */
   --nav-background-color: #f9fafa;
@@ -174,6 +186,18 @@ body {
   --search-bar-border-color: rgba(255, 255, 255, 0.5);
 
   --main-background-color: #000000;
+
+  /* signIn-Page */
+  --sign-in-container-color: #dfdfdf71;
+  --return-icon: url('./../assets/ReturnIcon_White.png');
+  --return-icon-hover: url('./../assets/ReturnIcon_Hover.png');
+  --sign-in-button-background-color: #000000;
+  --sign-in-button-background-color-hover: #ffffff;
+  --sign-in-button-text-color: #ffffff;
+  --sign-in-button-text-color-hover: #000000;
+  --sign-in-button-border-color: none;
+  --other-text-color: lightgrey;
+  --other-text-color-hover: #ffffff;
   /* navbar */
   --nav-background-color: #000000;
   --nav-bar-button-text-color: #ffffff;

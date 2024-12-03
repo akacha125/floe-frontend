@@ -1,0 +1,216 @@
+.signIn-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-background-color);
+  justify-content: center;
+  align-items: center;
+}
+.signIn-container {
+  position: relative; /* 자식의 절대 위치를 기준으로 설정 */
+  display: flex;
+  width: 1176px;
+  min-width: 500px;
+  height: 700px;
+  min-height: 200px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: var(--sign-in-container-color);
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.signIn-top {
+  display: flex;
+  flex-direction: row; /* 가로 배치 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between; /* 양쪽 정렬 */
+  width: 100%;
+  height: auto;
+}
+.signIn-logo {
+  font-family: 'Road Rage';
+  display: inline; /* 텍스트 영역만 클릭 가능하도록 설정 */
+  font-size: 80px;
+  margin-top: 20px;
+  margin-left: 30px;
+  background-image: linear-gradient(180deg, #2bc0e4 0%, #eaecc6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.signIn-signin {
+  font-size: 60px;
+  color: #4cbfe5;
+  font-family: 'Pretendard Variable';
+  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.signIn-input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 200px;
+}
+.signIn-email-section {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.E-MAIL,
+.PW {
+  display: flex;
+  font-family: 'Pretendard Variable';
+  font-size: 20px;
+  color: var(--text-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.email-input,
+.pw-input {
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 400px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+.signIn-pw-section {
+  display: flex;
+  flex-direction: row;
+  gap: 42px;
+}
+.signIn-signIn-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid var(--sign-in-button-border-color);
+  background-color: var(--sign-in-button-background-color);
+  color: var(--sign-in-button-text-color);
+  cursor: pointer;
+}
+.signIn-signIn-button:hover {
+  background-color: var(--sign-in-button-background-color-hover);
+  color: var(--sign-in-button-text-color-hover);
+}
+
+.other-text-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 200px;
+}
+.other-text-left,
+.other-text-right {
+  font-size: 16px;
+  color: var(--other-text-color);
+}
+.other-text-right {
+  cursor: pointer;
+}
+.other-text-right:hover {
+  color: var(--other-text-color-hover);
+  font-weight: bolder;
+}
+
+.divider {
+  width: 100%;
+  height: 10px;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin: 30px 0px;
+}
+.signIn-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.google-login-button {
+  font-family: 'Roboto Medium';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* 아이콘과 텍스트 간격 */
+
+  font-size: 20px;
+
+  width: 300px;
+  height: 50px;
+  color: #757575;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  text-decoration: none;
+  margin-bottom: 35px;
+}
+.google-icon {
+  width: 48px;
+  height: 48px;
+}
+.google-login-button:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--google-text-hover-color);
+}
+.github-login-button {
+  font-family: 'Roboto Medium';
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* 아이콘과 텍스트 간격 */
+
+  font-size: 20px;
+
+  width: 300px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #000000;
+  border: var(--github-login-button-border);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  text-decoration: none;
+  margin-bottom: 59px;
+}
+.github-icon {
+  background-image: url('./../../../assets/github.png');
+  background-position: center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+.github-login-button:hover {
+  background-color: #333333; /* 호버 시 더 진한 회색 */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.return-button {
+  position: absolute; /* 부모 컨테이너 기준으로 배치 */
+  left: 20px; /* 좌측 끝에서 여백 설정 */
+  bottom: 20px; /* 상단 여백 설정 */
+  width: 32px;
+  height: 32px;
+  background-image: var(--return-icon);
+  cursor: pointer;
+}
+
+.return-button:hover {
+  background-image: var(--return-icon-hover);
+}
