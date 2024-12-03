@@ -36,9 +36,13 @@ export default function AuthPage() {
           <span className={styles['text']}>OR</span>
           <span className={styles['line']}></span>
         </div>
-        <button className={styles['Button-Sign-Up']}>Sign Up</button>
+        <Link href="/auth/signup" passHref>
+          <button className={styles['Button-Sign-Up']}>Sign Up</button>
+        </Link>
         <div className={styles['Already-text']}>Already Have You Account?</div>
-        <button className={styles['Button-Sign-In']}>Sign In</button>
+        <Link href="/auth/signin" passHref>
+          <button className={styles['Button-Sign-In']}>Sign In</button>
+        </Link>
         <Link href="/" passHref>
           <button className={styles['Button-Return-Home']}>
             Return to Home

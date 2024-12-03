@@ -24,7 +24,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  -webkit-text-fill-color: transparent; /* 웹킷 브라우저용 */
+  -webkit-text-fill-color: transparent; 
   width: 122px;
   margin-bottom: 34px;
   line-height: 150%;
