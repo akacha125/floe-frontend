@@ -1,4 +1,4 @@
-.signIn-wrapper {
+.signUp-wrapper {
   display: flex;
   width: 100%;
   height: 100vh;
@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
 }
-.signIn-container {
+.signUp-container {
   position: relative; /* 자식의 절대 위치를 기준으로 설정 */
   display: flex;
   width: 1176px;
@@ -16,12 +16,12 @@
   border-radius: 15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  background-color: var(--sign-in-container-color);
+  background-color: var(--sign-up-container-color);
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
-.signIn-top {
+.signUp-top {
   display: flex;
   flex-direction: row; /* 가로 배치 */
   align-items: center; /* 세로 중앙 정렬 */
@@ -29,7 +29,7 @@
   width: 100%;
   height: auto;
 }
-.signIn-logo {
+.signUp-logo {
   font-family: 'Road Rage';
   display: inline; /* 텍스트 영역만 클릭 가능하도록 설정 */
   font-size: 80px;
@@ -42,7 +42,7 @@
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
-.signIn-signin {
+.signUp-signUp {
   font-size: 60px;
   color: #4cbfe5;
   font-family: 'Pretendard Variable';
@@ -52,22 +52,68 @@
   transform: translateX(-50%);
 }
 
-.signIn-input-section {
+.signUp-input-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  height: 200px;
+  width: 100%;
 }
-.signIn-email-section {
+.signUp-email-section,
+.signUp-pw-section,
+.signUp-pw-confirm-section,
+.signUp-nickname-input-section,
+.signUp-birth-input-section,
+.signUp-phone-number-section {
   display: flex;
   flex-direction: row;
   gap: 15px;
+  justify-content: space-between;
+  width: 49%;
 }
 
+.signUp-agree-personal-section {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.email-input,
+.pw-input,
+.confirm-pw-input,
+.nickname-input,
+.phone-number-input {
+  outline: none;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 400px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+.birth-year-input,
+.birth-month-input,
+.birth-day-input {
+  outline: none;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 88px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+}
 .E-MAIL,
-.PW {
+.PW,
+.Nickname,
+.Confirm-PW,
+.Birth-Date,
+.Phone-Number,
+.agree-personal {
   display: flex;
   font-family: 'Pretendard Variable';
   font-size: 20px;
@@ -76,23 +122,13 @@
   align-items: center;
 }
 
-.email-input,
-.pw-input {
-  outline: none;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  width: 400px;
-  height: 40px;
-  padding-left: 10px;
-  font-size: 16px;
-  background-color: #ffffff;
+.divider {
+  width: 100%;
+  height: 10px;
+  border-bottom: 1px solid var(--sign-up-divider-color);
 }
-.signIn-pw-section {
-  display: flex;
-  flex-direction: row;
-  gap: 42px;
-}
-.signIn-signIn-button {
+
+.signUp-signUp-button {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -100,105 +136,20 @@
   height: 30px;
   font-size: 18px;
   border-radius: 10px;
-  border: 1px solid var(--sign-in-button-border-color);
-  background-color: var(--sign-in-button-background-color);
-  color: var(--sign-in-button-text-color);
+  border: 1px solid var(--sign-up-button-border-color);
+  background-color: var(--sign-up-button-background-color);
+  color: var(--sign-up-button-text-color);
   cursor: pointer;
+  margin-top: 30px;
 }
-.signIn-signIn-button:hover {
-  background-color: var(--sign-in-button-background-color-hover);
-  color: var(--sign-in-button-text-color-hover);
+.signUp-signUp-button:hover {
+  background-color: var(--sign-up-button-background-color-hover);
+  color: var(--sign-up-button-text-color-hover);
 }
 
-.other-text-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 200px;
-}
-.other-text-left,
-.other-text-right {
-  font-size: 16px;
-  color: var(--other-text-color);
-}
-.other-text-right {
-  cursor: pointer;
-}
-.other-text-right:hover {
-  color: var(--other-text-color-hover);
-  font-weight: bolder;
-}
-
-.divider {
-  width: 100%;
-  height: 10px;
-  border-bottom: 1px solid black;
-  padding-bottom: 10px;
-  margin: 30px 0px;
-}
-.signIn-bottom {
+.signUp-bottom {
   display: flex;
   flex-direction: column;
-}
-.google-login-button {
-  font-family: 'Roboto Medium';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px; /* 아이콘과 텍스트 간격 */
-
-  font-size: 20px;
-
-  width: 300px;
-  height: 50px;
-  color: #757575;
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: box-shadow 0.3s;
-  text-decoration: none;
-  margin-bottom: 35px;
-}
-.google-icon {
-  width: 48px;
-  height: 48px;
-}
-.google-login-button:hover {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  color: var(--google-text-hover-color);
-}
-.github-login-button {
-  font-family: 'Roboto Medium';
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px; /* 아이콘과 텍스트 간격 */
-
-  font-size: 20px;
-
-  width: 300px;
-  height: 50px;
-  color: #ffffff;
-  background-color: #000000;
-  border: var(--github-login-button-border);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: box-shadow 0.3s;
-  text-decoration: none;
-  margin-bottom: 59px;
-}
-.github-icon {
-  background-image: url('./../../../assets/github.png');
-  background-position: center;
-  background-size: cover;
-  width: 30px;
-  height: 30px;
-}
-.github-login-button:hover {
-  background-color: #333333; /* 호버 시 더 진한 회색 */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .return-button {

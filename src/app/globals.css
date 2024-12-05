@@ -53,6 +53,21 @@
   --sign-in-button-border-color: lightgrey;
   --other-text-color: rgba(0, 0, 0, 0.7);
   --other-text-color-hover: #000000;
+  --sign-in-divider-color: #000000;
+
+  /* signUp-Page */
+  --sign-up-container-color: #ffffff;
+  --return-icon: url('./../assets/ReturnIcon_Dark.png');
+  --return-icon-hover: url('./../assets/ReturnIcon_Hover.png');
+  --sign-up-button-background-color: #ffffff;
+  --sign-up-button-background-color-hover: #000000;
+  --sign-up-button-text-color: #000000;
+  --sign-up-button-text-color-hover: #ffffff;
+  --sign-up-button-border-color: lightgrey;
+  --other-text-color: rgba(0, 0, 0, 0.7);
+  --other-text-color-hover: #000000;
+  --sign-up-divider-color: #000000;
+
   /* search-bar */
   --search-bar-border-color: rgba(0, 0, 0, 0.5);
   /* navbar */
@@ -198,6 +213,20 @@ body {
   --sign-in-button-border-color: none;
   --other-text-color: lightgrey;
   --other-text-color-hover: #ffffff;
+  --sign-in-divider-color: #ffffff;
+  /* signIn-Page */
+  --sign-up-container-color: #dfdfdf71;
+  --return-icon: url('./../assets/ReturnIcon_White.png');
+  --return-icon-hover: url('./../assets/ReturnIcon_Hover.png');
+  --sign-up-button-background-color: #000000;
+  --sign-up-button-background-color-hover: #ffffff;
+  --sign-up-button-text-color: #ffffff;
+  --sign-up-button-text-color-hover: #000000;
+  --sign-up-button-border-color: none;
+  --other-text-color: lightgrey;
+  --other-text-color-hover: #ffffff;
+  --sign-up-divider-color: #ffffff;
+
   /* navbar */
   --nav-background-color: #000000;
   --nav-bar-button-text-color: #ffffff;
