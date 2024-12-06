@@ -1,0 +1,39 @@
+.tab-Container {
+  margin: 0rem;
+  padding: 0rem;
+
+  width: 48rem;
+  height: 2.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-top: 0.1rem solid var(--mypage-tab-color);
+}
+
+.tab-Button {
+  margin-top: -0.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  border:none;
+  background-color:transparent;
+
+  color: var(--mypage-tab-color);
+
+  cursor:pointer;
+}
+
+.tab-Button.active {
+  margin-top: -0.1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  border-top: 0.125rem solid black;
+  color: black;
+}
