@@ -6,7 +6,10 @@ import styles from './MyPage.module.css';
 import Header from '../header/page';
 import NavBar from '../navBar/page';
 
-import TabNavigation from '@/components/tabNavigation/page';
+import TabNavigation from '@/components/tab/tabNavigation/page';
+import PostsContents from '@/components/tab/tabContents/postsContents/page';
+import LikeContents from '@/components/tab/tabContents/likeContents/page';
+import SaveContents from '@/components/tab/tabContents/saveContents/page';
 
 export default function MyPage() {
   // Image 변경 변수
@@ -46,11 +49,11 @@ export default function MyPage() {
   const TabContent = () => {
     switch (activeTab) {
       case 'POSTS':
-        return <div> POSTS Contents </div>;
+        return PostsContents();
       case 'LIKE':
-        return <div> LIKE Contents </div>;
+        return LikeContents();
       case 'SAVE':
-        return <div> SAVE Contents </div>;
+        return SaveContents();
       default:
         return <div> Default Contents </div>;
     }

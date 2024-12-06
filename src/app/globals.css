@@ -127,7 +127,8 @@
   --mypage-image-settingWhite: url('./../assets/settingWhite.png');
   --mypage-image-settingBlack: url('./../assets/settingBlack.png');
 
-  --mypage-gray-color: #dbdbdb;
+  --mypage-Edit-color: #efefef;
+  --mypage-tab-color: #dbdbdb;
 }
 body {
   background-color: #f9fafa;
