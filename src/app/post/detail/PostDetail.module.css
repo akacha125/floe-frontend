@@ -1,0 +1,222 @@
+.post-detail-page-container {
+  display: grid;
+  grid-template-columns: 400px 1fr 220px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1920px; /* 전체 너비 제한 */
+  margin: 0 auto;
+  padding-top: 157px;
+  background-color: var(--main-background-color);
+}
+
+.navbar {
+  position: sticky;
+  top: 157px;
+  width: 170px; /* Navbar 너비 고정 */
+  align-self: start; /* 스크롤 시 시작 위치에 고정 */
+  height: calc(100vh - 157px);
+}
+.post-detail-item-container {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+  max-height: fit-content;
+  font-family: 'Pretendard Variable';
+  background-color: var(--post-item-background-color);
+  border: 1px solid var(--post-item-border-color);
+  color: var(--post-item-text-color);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.post-detail-top {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid var(--post-detail-item-top-border-color);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.profile-image-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 60px;
+
+  background-image: url(./../../../assets/WR.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-left: 15px;
+}
+.user-nickname {
+  font-size: 20px;
+}
+
+.post-detail-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stack-tag-box {
+  display: flex;
+  height: 40px;
+  padding-left: 15px;
+  align-items: center;
+  display: inline-flex;
+}
+
+.post-detail-title {
+  display: flex;
+  padding-left: 15px;
+  align-items: center;
+  font-size: 30px;
+  color: var(--post-detail-item-title-text-color);
+}
+.post-detail-content {
+  display: flex;
+  padding: 0px 15px;
+  height: auto;
+  align-items: center;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: -0.4px;
+}
+.post-detail-image-container {
+  display: flex;
+  padding: 0px 15px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  height: 400px;
+}
+.post-detail-images {
+  width: 100%;
+  height: 100%;
+  background-image: url('./../../../assets/test.png');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.post-detail-bottom {
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  gap: 60px;
+}
+
+.post-detail-like-box {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+.post-detail-like-icon {
+  width: 32px;
+  height: 32px;
+  background-image: var(--post-item-Heart-icon);
+  cursor: pointer;
+}
+.post-detail-like-icon:hover {
+  background-image: url('./../../../assets/HeartIcon_Hover.png');
+}
+.post-detail-comment-box {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+.post-detail-comment-icon {
+  width: 32px;
+  height: 32px;
+  background-image: var(--post-item-Comment-icon);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.post-detail-comment-icon:hover {
+  background-image: url('./../../../assets/CommentIcon_Hover.png');
+}
+.post-detail-save-box {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  gap: 10px;
+}
+.post-detail-save-icon {
+  width: 32px;
+  height: 32px;
+  background-image: var(--post-item-Save-icon);
+  cursor: pointer;
+}
+.post-detail-save-icon:hover {
+  background-image: url('./../../../assets/SaveIcon_Hover.png');
+}
+.post-detail-upload-time {
+  font-size: 14px;
+  margin-left: auto; /* 오른쪽 끝으로 밀어내기 */
+  align-self: center; /* 수직 가운데 정렬 */
+  color: var(--post-detail-upload-time-text-color);
+}
+
+.comment-section {
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.comment-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.comment-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.user-profile-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.user-profile-image {
+  width: 32px;
+  height: 32px;
+  background-image: url(./../../../assets/WR.png);
+  background-size: cover;
+  border-radius: 50%;
+}
+.user-profile-nickname {
+  font-size: 16px;
+}
+.comment-input {
+  flex: 1;
+  padding: 10px 0px;
+  border: none;
+  border-bottom: 1px solid var(--post-item-border-color);
+  background-color: var(--post-item-background-color); /* 배경색 추가 */
+  outline: none; /* 포커스 시 기본 outline 제거 */
+  color: var(--post-item-text-color);
+  font-size: 15px;
+}
+.comment-Apply-Button {
+  width: 61px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 5px;
+  background-color: var(--post-detail-comment-apply-button-background-color);
+  color: var(--post-detail-comment-apply-button-text-color);
+  cursor: pointer;
+}
+.comment-Apply-Button:hover {
+  background-color: var(
+    --post-detail-comment-apply-button-background-color-hover
+  );
+  color: var(--post-detail-comment-apply-button-text-color-hover);
+  cursor: pointer;
+}

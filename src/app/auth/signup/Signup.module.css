@@ -1,0 +1,167 @@
+.signUp-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-background-color);
+  justify-content: center;
+  align-items: center;
+}
+.signUp-container {
+  position: relative; /* 자식의 절대 위치를 기준으로 설정 */
+  display: flex;
+  width: 1176px;
+  min-width: 500px;
+  height: 700px;
+  min-height: 200px;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: var(--sign-up-container-color);
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.signUp-top {
+  display: flex;
+  flex-direction: row; /* 가로 배치 */
+  align-items: center; /* 세로 중앙 정렬 */
+  justify-content: space-between; /* 양쪽 정렬 */
+  width: 100%;
+  height: auto;
+}
+.signUp-logo {
+  font-family: 'Road Rage';
+  display: inline; /* 텍스트 영역만 클릭 가능하도록 설정 */
+  font-size: 80px;
+  margin-top: 20px;
+  margin-left: 30px;
+  background-image: linear-gradient(180deg, #2bc0e4 0%, #eaecc6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+.signUp-signUp {
+  font-size: 60px;
+  color: #4cbfe5;
+  font-family: 'Pretendard Variable';
+  margin-right: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.signUp-input-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+.signUp-email-section,
+.signUp-pw-section,
+.signUp-pw-confirm-section,
+.signUp-nickname-input-section,
+.signUp-birth-input-section,
+.signUp-phone-number-section {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: space-between;
+  width: 49%;
+}
+
+.signUp-agree-personal-section {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.email-input,
+.pw-input,
+.confirm-pw-input,
+.nickname-input,
+.phone-number-input {
+  outline: none;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 400px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+.birth-year-input,
+.birth-month-input,
+.birth-day-input {
+  outline: none;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  width: 88px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+}
+.E-MAIL,
+.PW,
+.Nickname,
+.Confirm-PW,
+.Birth-Date,
+.Phone-Number,
+.agree-personal {
+  display: flex;
+  font-family: 'Pretendard Variable';
+  font-size: 20px;
+  color: var(--text-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  width: 100%;
+  height: 10px;
+  border-bottom: 1px solid var(--sign-up-divider-color);
+}
+
+.signUp-signUp-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid var(--sign-up-button-border-color);
+  background-color: var(--sign-up-button-background-color);
+  color: var(--sign-up-button-text-color);
+  cursor: pointer;
+  margin-top: 30px;
+}
+.signUp-signUp-button:hover {
+  background-color: var(--sign-up-button-background-color-hover);
+  color: var(--sign-up-button-text-color-hover);
+}
+
+.signUp-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.return-button {
+  position: absolute; /* 부모 컨테이너 기준으로 배치 */
+  left: 20px; /* 좌측 끝에서 여백 설정 */
+  bottom: 20px; /* 상단 여백 설정 */
+  width: 32px;
+  height: 32px;
+  background-image: var(--return-icon);
+  cursor: pointer;
+}
+
+.return-button:hover {
+  background-image: var(--return-icon-hover);
+}

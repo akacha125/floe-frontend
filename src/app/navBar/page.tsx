@@ -8,10 +8,11 @@ import { usePathname } from 'next/navigation';
 export default function NavBar() {
   //          state: See More 버튼 팝업 상태          //
   const [showSeeMorePopup, setShowSeeMorePopup] = useState<boolean>(false);
-
+  //          state: Alarm 버튼 팝업 상태          //
+  const [showAlarmPopup, setShowAlarmPopup] = useState(false);
   //          state: 다크모드 상태 관리          //
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+  const [isMouseOver, setIsMouseOver] = useState(false);
   const pathname = usePathname();
   const isActive = (path: string) => pathname === path;
   //          function: See More 팝업 토글 함수          //
@@ -19,20 +20,26 @@ export default function NavBar() {
     setShowSeeMorePopup(!showSeeMorePopup);
   };
 
-  // 페이지 로드 시 다크모드 여부를 로컬 스토리지에서 확인
-  useEffect(() => {
-    const savedMode = localStorage.getItem('theme') === 'dark';
-    setIsDarkMode(savedMode);
-    document.body.classList.toggle('dark-mode', savedMode);
-  }, []);
+  //          function: Alarm 팝업 토글 함수          //
+  const toggleAlarmPopup = () => {
+    setShowAlarmPopup(!showAlarmPopup);
+  };
 
-  // 다크모드 토글 함수
+  //          function: 다크/라이트모드 토글 함수          //
   const toggleDarkMode = () => {
     const newMode = !isDarkMode;
     setIsDarkMode(newMode);
     document.body.classList.toggle('dark-mode', newMode);
     localStorage.setItem('theme', newMode ? 'dark' : 'light');
+    setShowSeeMorePopup(false); // 팝업 닫기
   };
+
+  //          effect: 페이지 로드 시 다크모드 여부를 로컬 스토리지에서 확인 //
+  useEffect(() => {
+    const savedMode = localStorage.getItem('theme') === 'dark';
+    setIsDarkMode(savedMode);
+    document.body.classList.toggle('dark-mode', savedMode);
+  }, []);
 
   //          render: NavBar 렌더링          //
   return (
@@ -49,19 +56,77 @@ export default function NavBar() {
           Home
         </button>
       </Link>
-      <Link href="/alarm" passHref style={{ textDecoration: 'none' }}>
-        <button
-          className={`${styles['Alarm-Button']} ${
-            isActive('/alarm') ? styles['active'] : ''
-          }`}>
-          <div
-            className={`${styles['Heart-Icon']} ${
-              isActive('/alarm') ? styles['active-icon'] : ''
-            }`}></div>
-          Alarm
-        </button>
-      </Link>
-      <Link href="/post" passHref style={{ textDecoration: 'none' }}>
+
+      <button
+        className={`${styles['Alarm-Button']} ${
+          isActive('/alarm') ? styles['active'] : ''
+        }`}
+        onClick={toggleAlarmPopup}>
+        <div
+          className={`${styles['Heart-Icon']} ${
+            isActive('/alarm') ? styles['active-icon'] : ''
+          }`}></div>
+        Alarm
+      </button>
+      {showAlarmPopup && (
+        <div className={styles['alarm-popup-container']}>
+          <div className={styles['alarm-popup-Top']}>
+            <div className={styles['alarm-popup-Top-User-Profile-Image']}></div>
+            <div className={styles['alarm-popup-Top-User-More']}>
+              <div className={styles['alarm-popup-Top-User-Follow-Request']}>
+                {'Follow Request'}
+              </div>
+              <div className={styles['alarm-popup-Top-User-Nickname']}>
+                {'JAEJAE'}
+              </div>
+            </div>
+            <div className={styles['alarm-popup-Top-More']}></div>
+          </div>
+          <div className={styles['alarm-popup-Bottom']}>
+            <div className={styles['alarm-popup-Today']}>
+              {'Today'}
+              <div className={styles['alarm-popup-Item']}>
+                <div className={styles['alarm-popup-Item-Profile']}></div>
+                <div className={styles['alarm-popup-Item-Content']}>
+                  <div className={styles['alarm-popup-Item-Text']}>
+                    JAEJAE, JAEJAE and JAEJAE liked your post
+                  </div>
+                  <span className={styles['alarm-popup-Item-Time']}>1h</span>
+                </div>
+                <div className={styles['alarm-popup-Item-Images']}></div>
+              </div>
+
+              <div className={styles['alarm-popup-Item']}>
+                <div className={styles['alarm-popup-Item-Profile']}></div>
+                <div className={styles['alarm-popup-Item-Content']}>
+                  <div className={styles['alarm-popup-Item-Text']}>
+                    JAEJAE, JAEJAE and JAEJAE liked your post
+                  </div>
+                  <span className={styles['alarm-popup-Item-Time']}>1h</span>
+                </div>
+                <div className={styles['alarm-popup-Item-Images']}></div>
+              </div>
+
+              <div className={styles['alarm-popup-Item']}>
+                <div className={styles['alarm-popup-Item-Profile']}></div>
+                <div className={styles['alarm-popup-Item-Content']}>
+                  <div className={styles['alarm-popup-Item-Text']}>
+                    JAEJAE, JAEJAE and JAEJAE liked your post
+                  </div>
+                  <span className={styles['alarm-popup-Item-Time']}>1h</span>
+                </div>
+                <div className={styles['alarm-popup-Item-Images']}></div>
+              </div>
+            </div>
+
+            <div className={styles['alarm-popup-This-Week']}></div>
+            <div className={styles['alarm-popup-This-Month']}></div>
+            <div className={styles['alarm-popup-Earlier']}></div>
+          </div>
+        </div>
+      )}
+
+      <Link href="/post/write" passHref style={{ textDecoration: 'none' }}>
         <button
           className={`${styles['Post-Button']} ${
             isActive('/post') ? styles['active'] : ''
