@@ -20,6 +20,7 @@
 .user-Contents {
   display: flex;
   flex-direction: column;
+  color: var(--mypage-text-color);
 }
 
 .user-Info {
@@ -29,7 +30,7 @@
   flex-direction: row;
   justify-content: space-between;
 
-  margin : 2rem 0rem;
+  margin: 2rem 0rem;
 }
 
 .user-Image {
@@ -93,13 +94,12 @@
   width: 3rem;
 }
 
-
 .user-Edit {
   /* width: 100%; */
   display: flex;
   flex-direction: row;
-  justify-content : space-between;
-  gap:1rem;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .user-setting {
@@ -122,7 +122,7 @@
   border: none;
   border-radius: 0.5rem;
   background-color: var(--mypage-Edit-color);
-  cursor:pointer;
+  cursor: pointer;
 }
 .user-Name {
   font-size: 1.25rem;

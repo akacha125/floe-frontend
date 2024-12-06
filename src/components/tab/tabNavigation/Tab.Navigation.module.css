@@ -18,12 +18,12 @@
   justify-content: center;
 
   width: 4rem;
-  border:none;
-  background-color:transparent;
+  border: none;
+  background-color: transparent;
 
   color: var(--mypage-tab-color);
 
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .tab-Button.active {
@@ -34,6 +34,7 @@
   justify-content: center;
 
   width: 4rem;
-  border-top: 0.125rem solid black;
-  color: black;
+  border-top: 0.125rem solid var(--mypage-tab-color-active);
+  color: var(--mypage-text-color-active);
+  font-weight: bolder;
 }

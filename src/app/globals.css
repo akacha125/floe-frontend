@@ -174,13 +174,16 @@
   --post-Page-Upload-Button-background-color: #ffffff;
   --post-Page-Upload-Button-background-color-hover: #eaeaea;
   --post-Page-Upload-Button-text-color: #000000;
-
+  /* my page */
   --mypage-image-userInitialImage: url('./../assets/JJangGuWinter.png');
   --mypage-image-settingWhite: url('./../assets/settingWhite.png');
   --mypage-image-settingBlack: url('./../assets/settingBlack.png');
 
   --mypage-Edit-color: #efefef;
-  --mypage-tab-color: #dbdbdb;
+  --mypage-tab-color: rgba(0, 0, 0, 0.44);
+  --mypage-tab-color-active: #000000;
+  --mypage-text-color: #000000;
+  --mypage-text-color-active: #000000;
 }
 body {
   background-color: #f9fafa;
@@ -340,4 +343,15 @@ body {
   --post-Page-Upload-Button-background-color: rgba(57, 57, 57, 0.6);
   --post-Page-Upload-Button-background-color-hover: #000000;
   --post-Page-Upload-Button-text-color: #ffffff;
+
+  /* my page */
+  --mypage-image-userInitialImage: url('./../assets/JJangGuWinter.png');
+  --mypage-image-settingWhite: url('./../assets/settingWhite.png');
+  --mypage-image-settingBlack: url('./../assets/settingBlack.png');
+
+  --mypage-Edit-color: #efefef;
+  --mypage-tab-color: #dbdbdb;
+  --mypage-tab-color-active: #4cbfe5;
+  --mypage-text-color: #ffffff;
+  --mypage-text-color-active: #4cbfe5;
 }
