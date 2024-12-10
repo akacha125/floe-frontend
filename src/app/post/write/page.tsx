@@ -12,13 +12,25 @@ import Header from '../../header/page';
 import styles from './PostWrite.module.css';
 import NavBar from '../../navBar/page';
 
+//          component: 게시물 작성 화면 컴포넌트          //
 export default function PostWrite() {
+
+  //          state: 제목 영역 요소 참조 상태          //
+  const titleRef = useRef<HTMLTextAreaElement | null>(null);
+  //          state: 본문 영역 요소 참조 상태          //
+  const contentRef = useRef<HTMLTextAreaElement | null>(null);
+  //          state: 이미지 입력 요소 참조 상태          //
+  const imageInputRef = useRef<HTMLInputElement | null>(null);
+  //          state: 태그 상태          //
   const [tag, setTag] = useState<string>('');
+  //          state: 카테고리 상태          //
   const [category, setCategory] = useState<string>('');
   const [content, setContent] = useState<string>('');
   const handleContentChange = (value: string) => {
     setContent(value);
   };
+
+
 
   //          function: Tip-Tap Editor 함수          //
   const editor = useEditor({

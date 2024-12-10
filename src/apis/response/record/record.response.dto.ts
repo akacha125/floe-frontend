@@ -1,12 +1,13 @@
 import RecordItem from '../../../types/interface/record-item.interface';
 import ResponseDto from '../Response.dto';
 
-//          interface: 특정 게시물 조회 DTO          //
-export default interface GetRecordResponseDto extends ResponseDto {
-    data: RecordItem;
+//          interface: 특정 게시물 조회 DTO          <완>//
+export default interface GetDetailRecordResponseDto extends ResponseDto {
+    data: RecordItem; // 게시물 상세 정보
 }
-//          interface: 전체(최신순) 게시물 조회 DTO          //
-export default interface GetLatestRecordResponseDto extends ResponseDto {
+
+//          interface: 전체(최신순) 게시물 조회 DTO        <완>  //
+export default interface GetRecordResponseDto extends ResponseDto {
     content: RecordItem[]; // 게시물 리스트
     pageable: {            // 페이지 정보
         pageNumber: number; // 현재 페이지 번호
@@ -25,17 +26,18 @@ export default interface GetLatestRecordResponseDto extends ResponseDto {
     empty: boolean;            // 데이터가 비었는지 여부
 }
 
-//          interface: 게시물 생성 DTO          //
-export default interface PostRecordResponseDto extends ResponseDto {
-    recordId: number; // 생성된 게시물의 ID
-}
+//          interface: 게시물 생성 DTO       <완>   //
+export default interface PostRecordResponseDto extends ResponseDto<{
+    recordId: number;
+}> { }
 
-//          interface: 게시물 수정 DTO          //
+
+//          interface: 게시물 수정 DTO      <완>     //
 export default interface PutRecordResponseDto extends ResponseDto {
     data: RecordItem; // RecordItem 재사용
 }
 
-//          interface: 게시물 삭제 DTO          //
+//          interface: 게시물 삭제 DTO     <완>     //
 export default interface DeleteRecordResponseDto extends ResponseDto {
 
 }
