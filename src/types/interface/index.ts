@@ -1,6 +1,6 @@
 import PostItem from './record-item.interface';
 import CommentItem from './comment-item.interface';
-import FavoriteItem from './favorite-item.interface';
+import FavoriteItem from './like-item.interface';
 
 export type {
     PostItem,

@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { ResponseDto } from './response';
-import { GetRecordResponseDto, GetLatestRecordResponseDto, PostRecordResponseDto, PutRecordResponseDto, DeleteRecordResponseDto, PostCommentResponseDto, GetCommentResponseDto, DeleteCommentResponseDto } from './response/record';
+import { PostRecordResponseDto, PutRecordResponseDto, DeleteRecordResponseDto, PostCommentResponseDto, GetCommentResponseDto, DeleteCommentResponseDto, GetRecordResponseDto } from './response/record';
 import { PostCommentRequestDto, PutRecordRequestDto, PostRecordRequestDto } from './request/record';
 import { SignInRequestDto, SignUpRequestDto } from './request/auth';
 import { SignInResponseDto, SignUpResponseDto } from './response/auth';
+import GetDetailRecordResponseDto from './response/record/record.response.dto';
 
 const DOMAIN = 'http://localhost:8080';
 const API_DOMAIN = `${DOMAIN}/api/v1`;
@@ -45,9 +46,9 @@ export const signUpRequest = async (requestBody: SignUpRequestDto) => {
 
 
 // 특정 기록 조회
-const GET_RECORD_URL = (recordId: number | string) => `${API_DOMAIN}/records/${recordId}`;
+const GET_DETAIL_RECORD_URL = (recordId: number | string) => `${API_DOMAIN}/records/${recordId}`;
 // 전체 기록 조회(최신순 / 홈페이지)
-const GET_LATEST_RECORD_URL = () => `${API_DOMAIN}/records`;
+const GET_RECORD_URL = () => `${API_DOMAIN}/records`;
 // 기록 생성
 const POST_RECORD_URL = () => `${API_DOMAIN}/records`;
 // 특정 기록 수정
@@ -57,10 +58,10 @@ const DELETE_RECORD_URL = (recordId: number | string) => `${API_DOMAIN}/records/
 
 
 //          function: 특정 기록 조회 요청 API          //
-export const getRecordRequest = async (recordId: number | string) => {
-    const result = await axios.get(GET_RECORD_URL(recordId))
+export const getDetailRecordRequest = async (recordId: number | string) => {
+    const result = await axios.get(GET_DETAIL_RECORD_URL(recordId))
         .then(response => {
-            const responseBody: GetRecordResponseDto = response.data;
+            const responseBody: GetDetailRecordResponseDto = response.data;
             return responseBody;
         })
         .catch(error => {
@@ -71,10 +72,10 @@ export const getRecordRequest = async (recordId: number | string) => {
     return result;
 }
 //          function: 전체 기록 조회(최신순 / 홈페이지) 요청 API          //
-export const getLatestRecord = async () => {
-    const result = await axios.get(GET_LATEST_RECORD_URL())
+export const getRecord = async () => {
+    const result = await axios.get(GET_RECORD_URL())
         .then(response => {
-            const responseBody: GetLatestRecordResponseDto = response.data;
+            const responseBody: GetRecordResponseDto = response.data;
             return responseBody;
         })
         .catch(error => {
@@ -131,13 +132,13 @@ export const deleteRecord = async (recordId: number | string, accessToken: strin
 }
 
 // 댓글 작성
-const POST_COMMENT_URL = (recordId: number | string) => `${API_DOMAIN}/records/${recordId}/comments`;
+const POST_COMMENT_URL = (recordId: number | string) => `${API_DOMAIN}/comments/${recordId}`;
 // 댓글 수정
-const PUT_COMMENT_URL = (recordId: number | string, commentId: number | string) => `${API_DOMAIN}/records/${recordId}/comments/${commentId}`;
+// const PUT_COMMENT_URL = (recordId: number | string, commentId: number | string) => `${API_DOMAIN}/comments/${recordId}`;
 // 댓글 조회
-const GET_COMMENT_URL = (recordId: number | string) => `${API_DOMAIN}/records/${recordId}/comments`;
+const GET_COMMENT_URL = (recordId: number | string) => `${API_DOMAIN}/comments/${recordId}`;
 // 댓글 삭제
-const DELETE_COMMENT_URL = (recordId: number | string, commentId: number | string) => `${API_DOMAIN}/records/${recordId}/comments/${commentId}`;
+const DELETE_COMMENT_URL = (recordId: number | string, commentId: number | string) => `${API_DOMAIN}/comments/${recordId}/${commentId}`;
 
 //          function: 댓글 작성 요청 API          //
 export const postComment = async (recordId: number | string, requestBody: PostCommentRequestDto, accessToken: string) => {
@@ -155,19 +156,19 @@ export const postComment = async (recordId: number | string, requestBody: PostCo
 }
 
 //          function: 댓글 수정 요청 API          //
-export const putComment = async (recordId: number | string, commentId: number | string, requestBody: PostCommentRequestDto, accessToken: string) => {
-    const result = await axios.post(PUT_COMMENT_URL(recordId, commentId), requestBody, authorization(accessToken))
-        .then(response => {
-            const responseBody: PostCommentResponseDto = response.data;
-            return responseBody;
-        })
-        .catch(error => {
-            if (!error.response) return null;
-            const responseBody: ResponseDto = error.response.data;
-            return responseBody;
-        })
-    return result;
-}
+// export const putComment = async (recordId: number | string, commentId: number | string, requestBody: PostCommentRequestDto, accessToken: string) => {
+//     const result = await axios.post(PUT_COMMENT_URL(recordId, commentId), requestBody, authorization(accessToken))
+//         .then(response => {
+//             const responseBody: PostCommentResponseDto = response.data;
+//             return responseBody;
+//         })
+//         .catch(error => {
+//             if (!error.response) return null;
+//             const responseBody: ResponseDto = error.response.data;
+//             return responseBody;
+//         })
+//     return result;
+// }
 //          function: 댓글 조회 요청 API          //
 export const getComment = async (recordId: number | string, accessToken: string) => {
     const result = await axios.post(GET_COMMENT_URL(recordId), authorization(accessToken))
