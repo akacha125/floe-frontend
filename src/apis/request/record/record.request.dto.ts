@@ -12,7 +12,7 @@ export default interface PostRecordRequestDto {
 export default interface PutRecordRequestDto {
     title: string;
     content: string;
-    tags: string[];
+    tagNames: string[];
     medias: { mediaId: number; mediaUrl: string }[];
 }
 

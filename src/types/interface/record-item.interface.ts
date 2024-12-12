@@ -9,6 +9,6 @@ export default interface RecordItem {
     content: string;
     recordType: string;
     medias: { mediaId: number; mediaUrl: string }[];
-    tags: string[];
+    tagNames: string[];
     createdAt: string;
 }
