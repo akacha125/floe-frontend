@@ -1,8 +1,7 @@
-export default interface RecordItem {
+export default interface RecordListItem {
     recordId: number;
     user: {
         nickname: string;
-        email: string;
         profileImage: string | null;
     };
     title: string;
@@ -10,5 +9,7 @@ export default interface RecordItem {
     medias: { mediaId: number; mediaUrl: string }[];
     tagNames: string[];
     createdAt: string;
-    
+    likeCount : number;
+    commentCount: number;
+    saveCount : number;
 }
