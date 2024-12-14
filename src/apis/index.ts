@@ -74,9 +74,7 @@ export const getDetailRecordRequest = async (recordId: number | string) => {
 //          function: 전체 기록 조회(최신순 / 홈페이지) 요청 API          //
 export const getRecordRequest = async (page: number, size: number): Promise<GetRecordResponseDto> => {
     const response = await axios.get<GetRecordResponseDto>(
-        `${GET_RECORD_URL()}?page=${page}&size=${size}`, {
-        withCredentials: true, // 쿠키와 인증 정보를 포함
-    }
+        `${GET_RECORD_URL()}?page=${page}&size=${size}`
     );
     return response.data;
 };
