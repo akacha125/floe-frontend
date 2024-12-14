@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Signup.module.css';
 import Link from 'next/link';
-
+import { useState, KeyboardEvent, useRef, ChangeEvent, useEffect } from 'react';
+import { ResponseDto } from '@/apis/response';
+import { SignUpRequestDto } from '@/apis/request/auth';
+import { SignUpResponseDto } from '@/apis/response/auth';
+import { signUpRequest } from '@/apis/index';
 export default function SignUp() {
+  //          component: 회원가입 화면 컴포넌트          //
+  
+
   //          render: 회원가입 페이지 렌더링          //
   return (
     <div className={styles['signUp-wrapper']}>
@@ -97,7 +104,7 @@ export default function SignUp() {
           </div>
         </div>
 
-        <div className={styles['signUp-signUp-button']}>{'Sign Up'}</div> 
+        <div className={styles['signUp-signUp-button']}>{'Sign Up'}</div>
         <div className={styles['signUp-bottom']}>
           <Link href="/auth" passHref style={{ textDecoration: 'none' }}>
             <div className={styles['return-button']}></div>

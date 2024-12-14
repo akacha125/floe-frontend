@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './SignIn.module.css';
 import Link from 'next/link';
-
+import { useState, KeyboardEvent, useRef, ChangeEvent, useEffect } from "react";
+import { ResponseDto } from "@/apis/response";
+// import { useCookies } from "react-cookie";
 export default function SignIn() {
   //          render: 로그인 페이지 렌더링          //
   return (
