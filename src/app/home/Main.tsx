@@ -29,13 +29,14 @@ export default function Main() {
     queryKey: ['records'],
     queryFn: async ({ pageParam = 0 }) => {
       return await getRecordRequest(pageParam, 5);
+      
     },
     getNextPageParam: (lastPage) => {
-      if (lastPage.last) {
+      if (!lastPage || lastPage.last) {
         // 마지막 페이지면 undefined 반환
         return undefined;
       }
-      return lastPage.pageable.pageNumber + 1; // 다음 페이지 번호 반환
+      return lastPage.pageable?.pageNumber + 1 || 0;
     },
     initialPageParam: 0,
   });
