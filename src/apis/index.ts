@@ -72,22 +72,16 @@ export const getDetailRecordRequest = async (recordId: number | string) => {
     return result;
 }
 //          function: 전체 기록 조회(최신순 / 홈페이지) 요청 API          //
-export const getRecord = async () => {
-    const result = await axios.get(GET_RECORD_URL())
-        .then(response => {
-            const responseBody: GetRecordResponseDto = response.data;
-            return responseBody;
-        })
-        .catch(error => {
-            if (!error.response) return null;
-            const responseBody: ResponseDto = error.response.data;
-            return responseBody;
-        })
-    return result;
-}
+export const getRecordRequest = async (page: number, size: number): Promise<GetRecordResponseDto> => {
+    const response = await axios.get<GetRecordResponseDto>(
+      `${GET_RECORD_URL()}?page=${page}&size=${size}`
+    );
+    return response.data;
+  };
+  
 
 //          function: 기록 생성 요청 API          //
-export const postRecord = async (requestBody: PostRecordRequestDto, accessToken: string) => {
+export const postRecordRequest = async (requestBody: PostRecordRequestDto, accessToken: string) => {
     const result = await axios.post(POST_RECORD_URL(), requestBody, authorization(accessToken))
         .then(response => {
             const responseBody: PostRecordResponseDto = response.data;

@@ -1,6 +1,5 @@
-import RecordItem from '../../../types/interface/record-item.interface';
+import { RecordListItem, RecordItem } from '@/types/interface';
 import ResponseDto from '../Response.dto';
-
 //          interface: 특정 게시물 조회 DTO          <완>//
 export default interface GetDetailRecordResponseDto extends ResponseDto {
     data: RecordItem; // 게시물 상세 정보
@@ -8,7 +7,7 @@ export default interface GetDetailRecordResponseDto extends ResponseDto {
 
 //          interface: 전체(최신순) 게시물 조회 DTO        <완>  //
 export default interface GetRecordResponseDto extends ResponseDto {
-    content: RecordItem[]; // 게시물 리스트
+    content: RecordListItem[]; // 게시물 리스트
     pageable: {            // 페이지 정보
         pageNumber: number; // 현재 페이지 번호
         pageSize: number;   // 한 페이지에 포함된 요소 수

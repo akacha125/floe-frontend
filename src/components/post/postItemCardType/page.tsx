@@ -8,7 +8,7 @@ interface PostItemCardTypeProps {
 }
 
 export default function PostItemCardType({
-  recordListItem,
+  recordListItem
 }: PostItemCardTypeProps) {
   const {
     recordId,
