@@ -1,0 +1,30 @@
+.google-login-button {
+  font-family: 'Roboto Medium';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* 아이콘과 텍스트 간격 */
+
+  font-size: 20px;
+
+  width: 300px;
+  height: 60px;
+  color: #757575;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+  text-decoration: none;
+  margin-bottom: 35px;
+}
+
+.google-login-button:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  color: var(--google-text-hover-color);
+}
+
+.google-icon {
+  width: 48px;
+  height: 48px;
+}

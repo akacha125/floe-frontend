@@ -3,6 +3,10 @@ import Link from 'next/link';
 import styles from './Auth.module.css';
 import React from 'react';
 import { useState } from 'react';
+
+import GoogleLoginButton from '@/components/login/googleLogin/page';
+import GithubLoginButton from '@/components/login/githubLogin/page';
+
 export default function AuthPage() {
   // false: 라이트테마 true: 다크테마
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -19,18 +23,10 @@ export default function AuthPage() {
           Develop flow
           <br />A place to make your only develop Floor
         </div>
-        <button className={styles['google-login-button']}>
-          <img
-            src={'/signin-assets/Web/svg/light/web_light_sq_na.svg'}
-            alt="Google icon"
-            className={styles['google-icon']}
-          />
-          Sign in With Google
-        </button>
-        <button className={styles['github-login-button']}>
-          <div className={styles['github-icon']} />
-          Sign in with Github
-        </button>
+
+        <GoogleLoginButton buttonText="Sign in with Google" />
+        <GithubLoginButton buttonText="Sign in with Github" />
+
         <div className={styles['divider']}>
           <span className={styles['line']}></span>
           <span className={styles['text']}>OR</span>
