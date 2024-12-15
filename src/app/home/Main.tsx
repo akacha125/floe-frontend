@@ -12,6 +12,8 @@ import PostItemCardType from '@/components/post/postItemCardType/page';
 import PostItemListType from '@/components/post/postItemListType/page';
 import { getRecordRequest } from '@/apis';
 import { RecordListItem } from '@/types/interface';
+import { GetRecordResponseDto } from '@/apis/response/record';
+import { ResponseDto } from '@/apis/response';
 export default function Main() {
   //          state: Splash Screen 상태          //
   const [showSplash, setShowSplash] = useState(true);
@@ -20,18 +22,22 @@ export default function Main() {
   //          state: View Mode(카드형 or 리스트형) 상태         //
   const [viewMode, setViewMode] = useState('card');
   const observerRef = useRef<HTMLDivElement | null>(null);
+  const [recordList, setRecordList] = useState<RecordListItem[]>([]);
+
   const {
     data, // 불러온 데이터
     fetchNextPage, // 다음 페이지 요청
     hasNextPage, // 다음 페이지 여부
     isFetchingNextPage, // 다음 페이지 로드 중인지 여부
+    isLoading, // 데이터 로딩 중
   } = useInfiniteQuery({
     queryKey: ['records'],
     queryFn: async ({ pageParam = 0 }) => {
-      return await getRecordRequest(pageParam, 5);
-      
+      const response = await getRecordRequest(pageParam, 5);
+      console.log(response); // 반환되는 데이터 확인
+      return response;
     },
-    getNextPageParam: (lastPage) => {
+    getNextPageParam: (lastPage: GetRecordResponseDto) => {
       if (!lastPage || lastPage.last) {
         // 마지막 페이지면 undefined 반환
         return undefined;
@@ -80,6 +86,8 @@ export default function Main() {
     return () => observer.disconnect();
   }, [observerRef, hasNextPage, isFetchingNextPage]);
 
+  //          effect: 첫 마운트시 게시글 불러오기(게시글 없다면 빈 영역역)          //
+
   //          render: 렌더링          //  /
   return (
     <>
@@ -119,31 +127,73 @@ export default function Main() {
                   className={styles['list-icon']}
                   onClick={toggleViewListMode}></button>
               </div>
-              {viewMode === 'card' ? (
-                <div className={styles['card-view']}>
-                  {data?.pages.map((page) =>
-                    page.content.map((record) => (
-                      <PostItemCardType
-                        key={record.recordId}
-                        recordListItem={record}
-                      />
-                    )),
-                  )}
-                </div>
+              {isLoading ? (
+                <p>Loading...</p>
               ) : (
-                <div className={styles['list-view']}>
-                  {data?.pages.map((page) =>
-                    page.content.map((record) => (
-                      <PostItemListType
-                        key={record.recordId}
-                        recordListItem={record}
-                      />
-                    )),
+                <>
+                  {viewMode === 'card' ? (
+                    <div className={styles['card-view']}>
+                      {Array.isArray(data?.pages) && data?.pages.length > 0 ? (
+                        data?.pages.map((page, pageIndex) => {
+                          console.log('Page:', page); // 페이지 데이터 출력
+
+                          // content가 존재하고 배열인지 확인
+                          if (page.content && Array.isArray(page.content)) {
+                            return page.content.length > 0 ? (
+                              page.content.map((recordListItem) => {
+                                console.log('Record:', recordListItem); // 각 레코드 출력
+                                return (
+                                  <PostItemCardType
+                                    key={recordListItem.recordId}
+                                    recordListItem={recordListItem}
+                                  />
+                                );
+                              })
+                            ) : (
+                              <p key={pageIndex}></p> // 빈 페이지일 때
+                            );
+                          } else {
+                            return <p key={pageIndex}></p>; // content가 없을 때
+                          }
+                        })
+                      ) : (
+                        <p></p> // 데이터가 없을 때
+                      )}
+                    </div>
+                  ) : (
+                    <div className={styles['list-view']}>
+                      {Array.isArray(data?.pages) && data?.pages.length > 0 ? (
+                        data?.pages.map((page, pageIndex) => {
+                          console.log('Page:', page); // 페이지 데이터 출력
+
+                          // content가 존재하고 배열인지 확인
+                          if (page.content && Array.isArray(page.content)) {
+                            return page.content.length > 0 ? (
+                              page.content.map((recordListItem) => {
+                                console.log('Record:', recordListItem); // 각 게시글글 출력
+                                return (
+                                  <PostItemListType
+                                    key={recordListItem.recordId}
+                                    recordListItem={recordListItem}
+                                  />
+                                );
+                              })
+                            ) : (
+                              <p key={pageIndex}></p> // 빈 페이지일 때
+                            );
+                          } else {
+                            return <p key={pageIndex}></p>; // content가 없을 때
+                          }
+                        })
+                      ) : (
+                        <></> // 데이터가 없을 때
+                      )}
+                    </div>
                   )}
-                </div>
+                  {isFetchingNextPage && <p>Loading more...</p>}
+                  <div ref={observerRef} style={{ height: '1px' }} />
+                </>
               )}
-              {isFetchingNextPage && <p>Loading more...</p>}
-              <div ref={observerRef} style={{ height: '1px' }} />
             </main>
             <aside className={styles['sidebar']}>
               <SideBar />
